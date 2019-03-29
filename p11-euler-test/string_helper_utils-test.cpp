@@ -41,7 +41,8 @@ TEST(StringToNumberFunction, ReturnsMinus1)
 
 TEST(StringToNumberFunction, ThrowsExceptionIfNotANumber)
 {
-	//ASSERT_THROW(str_to_number<int>("a"), NotANumberExpeption);
+	ASSERT_THROW(str_to_number<int>("+"), NotANumberException);
+	ASSERT_THROW(str_to_number<int>("23213+"), NotANumberException);
 }
 
 

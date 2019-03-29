@@ -8,7 +8,7 @@
 
 bool is_number(const std::string& s)
 {
-	uint i = 0;
+	unsigned int i = 0;
 	if (s.size() > 0)
 	{
 		if (s[0] == '+' || s[0] == '-')

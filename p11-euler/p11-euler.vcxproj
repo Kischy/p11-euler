@@ -157,6 +157,10 @@
   <ItemGroup>
     <ClCompile Include="p11-euler.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NummberArrayCalculator.h" />
+    <ClInclude Include="the_number.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

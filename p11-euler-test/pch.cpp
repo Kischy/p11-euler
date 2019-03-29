@@ -4,3 +4,6 @@
 //
 
 #include "pch.h"
+
+#include "../p11-euler/string_helper_utils.cpp"
+

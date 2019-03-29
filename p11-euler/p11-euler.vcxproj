@@ -156,9 +156,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="p11-euler.cpp" />
+    <ClCompile Include="string_helper_utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NummberArrayCalculator.h" />
+    <ClInclude Include="string_helper_utils.h" />
     <ClInclude Include="the_number.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

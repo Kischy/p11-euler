@@ -3,7 +3,6 @@
 
 #include "../p11-euler/NummberArrayCalculator.h"
 
-
 class NummberArrayCalculatorStringConverter : public testing::Test
 {
 public:

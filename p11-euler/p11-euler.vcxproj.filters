@@ -18,12 +18,18 @@
     <ClCompile Include="p11-euler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="string_helper_utils.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="the_number.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="NummberArrayCalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="string_helper_utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

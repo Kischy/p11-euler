@@ -9,7 +9,7 @@
 class NummberArrayCalculator
 {
 public:
-	std::vector< unsigned int > convert_to_vector(const std::string& numbers_as_string) const
+	std::vector< unsigned int > convert_row_to_vector(const std::string& numbers_as_string) const
 	{
 		std::vector<unsigned int> the_numbers;
 

@@ -27,6 +27,30 @@ namespace helper
 
 	namespace string_utils
 	{
+		void explode(std::string str, std::vector<std::string>& list, const std::string& delim)
+		{
+			std::string str_left, str_right;
+			//	str = str.substr (0, str.length());	// Zeilenumbruch entfernen
+
+			int split = str.find(delim, 0);
+			if (split == -1)
+				list.push_back(str);
+
+			while (split >= 0)
+			{
+
+				split = str.find(delim, 0);
+				str_left = str.substr(0, split);
+				str_right = str.substr(split + delim.length(), str.length());
+				str = str_right;
+				list.push_back(str_left);
+
+				if (str_right.length() == 0)
+					split = -1;
+
+			}
+		}
+
 
 		bool is_number(const std::string& s)
 		{

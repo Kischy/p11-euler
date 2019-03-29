@@ -46,7 +46,30 @@ TEST(StringToNumberFunction, ThrowsExceptionIfNotANumber)
 }
 
 
+//Please refractor
+TEST(ExplodeStringToVectorFunction, GivesVectorWithOneElementOnEmptyString)
+{
+	std::string arbitraryDeliminator = " ";
 
+	std::vector<std::string> sList;
+	explode("", sList, arbitraryDeliminator);
+
+	ASSERT_EQ(1, sList.size());
+}
+
+
+//Please refractor
+TEST(ExplodeStringToVectorFunction, GivesTwoStringsWhenSeperatedbyDeliminator)
+{
+	std::string arbitraryDeliminator = " ";
+
+	std::vector<std::string> sList;
+	explode("dsa 123,", sList, arbitraryDeliminator);
+
+	ASSERT_EQ(2, sList.size());
+	ASSERT_EQ("dsa", sList.at(0));
+	ASSERT_EQ("123,", sList.at(1));
+}
 
 
 

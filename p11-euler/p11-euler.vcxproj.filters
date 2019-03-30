@@ -26,10 +26,10 @@
     <ClInclude Include="the_number.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NummberArrayCalculator.h">
+    <ClInclude Include="string_helper_utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="string_helper_utils.h">
+    <ClInclude Include="NumberArrayCalculator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

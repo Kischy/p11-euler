@@ -66,6 +66,7 @@ TEST(ExplodeStringToVectorFunction, GivesTwoStringsWhenSeperatedbyDeliminator)
 	std::vector<std::string> sList;
 	explode("dsa 123,", sList, arbitraryDeliminator);
 
+
 	ASSERT_EQ(2, sList.size());
 	ASSERT_EQ("dsa", sList.at(0));
 	ASSERT_EQ("123,", sList.at(1));

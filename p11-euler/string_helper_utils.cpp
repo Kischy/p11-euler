@@ -6,6 +6,9 @@
 #include <cctype>
 
 
+using namespace std;
+
+
 namespace
 {
 	bool is_plus_or_minus(const char letter){
@@ -16,7 +19,7 @@ namespace
 
 	}
 
-	bool is_size_one(const std::string& s)
+	bool is_size_one(const string& s)
 	{
 		return s.size() == 1;
 	}
@@ -27,32 +30,29 @@ namespace helper
 
 	namespace string_utils
 	{
-		void explode(std::string str, std::vector<std::string>& list, const std::string& delim)
+		void explode(string str, vector<string>& list, const string& delim)
 		{
-			std::string str_left, str_right;
-			//	str = str.substr (0, str.length());	// Zeilenumbruch entfernen
+			string str_left, str_right;
 
-			int split = str.find(delim, 0);
-			if (split == -1)
-				list.push_back(str);
+			size_t split = str.find(delim, 0);
+			if (split == string::npos) list.push_back(str);
 
-			while (split >= 0)
+			while (split != string::npos)
 			{
 
 				split = str.find(delim, 0);
 				str_left = str.substr(0, split);
-				str_right = str.substr(split + delim.length(), str.length());
+				str_right = str.substr(split + delim.length(), string::npos);
 				str = str_right;
 				list.push_back(str_left);
 
-				if (str_right.length() == 0)
-					split = -1;
+				if (str_right.length() == 0) split = string::npos;
 
 			}
 		}
 
 
-		bool is_number(const std::string& s)
+		bool is_number(const string& s)
 		{
 			if (is_size_one(s) && is_plus_or_minus(s[0])) return false;
 
@@ -71,12 +71,12 @@ namespace helper
 
 			for (; i < s.size(); i++)
 			{
-				if (std::ispunct(s[i]))
+				if (ispunct(s[i]))
 				{
 					if (s[i] == '.')	NoOfPoints++;
 					else				return false;
 				}
-				else if (!std::isdigit(s[i]))	return false;
+				else if (!isdigit(s[i]))	return false;
 			}
 
 			if (NoOfPoints > 1)	return false;
